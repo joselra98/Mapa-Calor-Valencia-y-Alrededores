@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_039e4e10f266a692a76f51ac7c90a236 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@master/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_039e4e10f266a692a76f51ac7c90a236" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_039e4e10f266a692a76f51ac7c90a236 = L.map(
+                "map_039e4e10f266a692a76f51ac7c90a236",
+                {
+                    center: [39.47, -0.376],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_89503c1a3293f018aa0297fd6da8eefa = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+        
+    
+            var feature_group_12984e991b9d279166253e5d2bed5db1 = L.featureGroup(
+                {}
+            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+        
+    
+            var marker_cluster_736645c780d0025621f330d90e299f6c = L.markerClusterGroup(
+                {}
+            );
+            feature_group_12984e991b9d279166253e5d2bed5db1.addLayer(marker_cluster_736645c780d0025621f330d90e299f6c);
+        
+    
+            var circle_marker_31e053d07afba086e5055b464a13b000 = L.circleMarker(
+                [39.464, -0.376],
+                {"bubblingMouseEvents": true, "color": "#800026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_736645c780d0025621f330d90e299f6c);
+        
+    
+        var popup_f5c47e22903c98c8b125ca1af745b2ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_467a0893b263b5b120fd21de050340fe = $(`<div id="html_467a0893b263b5b120fd21de050340fe" style="width: 100.0%; height: 100.0%;"><b>Ruzafa</b><br>Premium / Alta demanda<br><b>5.046 €/m²</b></div>`)[0];
+            popup_f5c47e22903c98c8b125ca1af745b2ab.setContent(html_467a0893b263b5b120fd21de050340fe);
+        
+
+        circle_marker_31e053d07afba086e5055b464a13b000.bindPopup(popup_f5c47e22903c98c8b125ca1af745b2ab)
+        ;
+
+        
+    
+    
+            var circle_marker_7d2023feb2c7fa97bb3c9bbd6bca3f95 = L.circleMarker(
+                [39.475, -0.377],
+                {"bubblingMouseEvents": true, "color": "#BD0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BD0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_736645c780d0025621f330d90e299f6c);
+        
+    
+        var popup_b054157b8a38b5c06567a15123f2e2ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d535185a11c12edb8542e368fadbabaa = $(`<div id="html_d535185a11c12edb8542e368fadbabaa" style="width: 100.0%; height: 100.0%;"><b>Ciutat Vella</b><br>Premium / Centro histórico<br><b>4.213 €/m²</b></div>`)[0];
+            popup_b054157b8a38b5c06567a15123f2e2ea.setContent(html_d535185a11c12edb8542e368fadbabaa);
+        
+
+        circle_marker_7d2023feb2c7fa97bb3c9bbd6bca3f95.bindPopup(popup_b054157b8a38b5c06567a15123f2e2ea)
+        ;
+
+        
+    
+    
+            var circle_marker_ff55d1c2ec98aad001761ef736e442fe = L.circleMarker(
+                [39.465, -0.373],
+                {"bubblingMouseEvents": true, "color": "#BD0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BD0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_736645c780d0025621f330d90e299f6c);
+        
+    
+        var popup_ad1c1f96c8cb52d151593a883cc2a5ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_290a2b06b0209d4d20c50dd90b9b1b91 = $(`<div id="html_290a2b06b0209d4d20c50dd90b9b1b91" style="width: 100.0%; height: 100.0%;"><b>L’Eixample</b><br>Premium<br><b>4.450 €/m²</b></div>`)[0];
+            popup_ad1c1f96c8cb52d151593a883cc2a5ee.setContent(html_290a2b06b0209d4d20c50dd90b9b1b91);
+        
+
+        circle_marker_ff55d1c2ec98aad001761ef736e442fe.bindPopup(popup_ad1c1f96c8cb52d151593a883cc2a5ee)
+        ;
+
+        
+    
+    
+            var circle_marker_f7199c609c574c28f800a1a132013c8e = L.circleMarker(
+                [39.474, -0.355],
+                {"bubblingMouseEvents": true, "color": "#BD0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BD0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_736645c780d0025621f330d90e299f6c);
+        
+    
+        var popup_eede662415320f1705c8b5a23b377287 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f848968449d71ef599ca3b69658e46f = $(`<div id="html_0f848968449d71ef599ca3b69658e46f" style="width: 100.0%; height: 100.0%;"><b>Pla del Real</b><br>Residencial alta<br><b>3.777 €/m²</b></div>`)[0];
+            popup_eede662415320f1705c8b5a23b377287.setContent(html_0f848968449d71ef599ca3b69658e46f);
+        
+
+        circle_marker_f7199c609c574c28f800a1a132013c8e.bindPopup(popup_eede662415320f1705c8b5a23b377287)
+        ;
+
+        
+    
+    
+            var feature_group_ef194cc4e52a5d7844a4438ff71b0f20 = L.featureGroup(
+                {}
+            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+        
+    
+            var marker_cluster_49e31b79f6bfd083a07701208f346251 = L.markerClusterGroup(
+                {}
+            );
+            feature_group_ef194cc4e52a5d7844a4438ff71b0f20.addLayer(marker_cluster_49e31b79f6bfd083a07701208f346251);
+        
+    
+            var circle_marker_b62803a38bf56121ce8aed2a41a957ce = L.circleMarker(
+                [39.47, -0.33],
+                {"bubblingMouseEvents": true, "color": "#E31A1C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E31A1C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_49e31b79f6bfd083a07701208f346251);
+        
+    
+        var popup_538c1558f3269f1285c734b20f73dac7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_974b64925f1c49cd3807aa422c571cad = $(`<div id="html_974b64925f1c49cd3807aa422c571cad" style="width: 100.0%; height: 100.0%;"><b>El Cabanyal</b><br>Emergente / Reforma<br><b>3.420 €/m²</b></div>`)[0];
+            popup_538c1558f3269f1285c734b20f73dac7.setContent(html_974b64925f1c49cd3807aa422c571cad);
+        
+
+        circle_marker_b62803a38bf56121ce8aed2a41a957ce.bindPopup(popup_538c1558f3269f1285c734b20f73dac7)
+        ;
+
+        
+    
+    
+            var circle_marker_3de23b407b078825d1233b6bf4c07a95 = L.circleMarker(
+                [39.487, -0.364],
+                {"bubblingMouseEvents": true, "color": "#E31A1C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E31A1C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_49e31b79f6bfd083a07701208f346251);
+        
+    
+        var popup_471835c53a901e22a7aee0470145ecac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb265d5233d2bda52121565b0104c62f = $(`<div id="html_cb265d5233d2bda52121565b0104c62f" style="width: 100.0%; height: 100.0%;"><b>Benimaclet</b><br>Emergente / Estudiantil<br><b>3.000 €/m²</b></div>`)[0];
+            popup_471835c53a901e22a7aee0470145ecac.setContent(html_cb265d5233d2bda52121565b0104c62f);
+        
+
+        circle_marker_3de23b407b078825d1233b6bf4c07a95.bindPopup(popup_471835c53a901e22a7aee0470145ecac)
+        ;
+
+        
+    
+    
+            var circle_marker_6a4fbf9f39e1eefaa4cc0a3319eb6c9b = L.circleMarker(
+                [39.449, -0.387],
+                {"bubblingMouseEvents": true, "color": "#FC4E2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FC4E2A", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_49e31b79f6bfd083a07701208f346251);
+        
+    
+        var popup_3850d5e71c00d4102315573412e37176 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_630171de7d304dbd2909939cb7dfafff = $(`<div id="html_630171de7d304dbd2909939cb7dfafff" style="width: 100.0%; height: 100.0%;"><b>Malilla</b><br>Emergente<br><b>2.800 €/m²</b></div>`)[0];
+            popup_3850d5e71c00d4102315573412e37176.setContent(html_630171de7d304dbd2909939cb7dfafff);
+        
+
+        circle_marker_6a4fbf9f39e1eefaa4cc0a3319eb6c9b.bindPopup(popup_3850d5e71c00d4102315573412e37176)
+        ;
+
+        
+    
+    
+            var circle_marker_9a7ef73c9e6e3099ba1968f5b100347b = L.circleMarker(
+                [39.468, -0.405],
+                {"bubblingMouseEvents": true, "color": "#FC4E2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FC4E2A", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_49e31b79f6bfd083a07701208f346251);
+        
+    
+        var popup_b4e7746eb2cdd66c7aef2fd4fe3869b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f704ce204d2232f21b4e485e177bbf39 = $(`<div id="html_f704ce204d2232f21b4e485e177bbf39" style="width: 100.0%; height: 100.0%;"><b>Nou Moles</b><br>Emergente<br><b>2.600 €/m²</b></div>`)[0];
+            popup_b4e7746eb2cdd66c7aef2fd4fe3869b6.setContent(html_f704ce204d2232f21b4e485e177bbf39);
+        
+
+        circle_marker_9a7ef73c9e6e3099ba1968f5b100347b.bindPopup(popup_b4e7746eb2cdd66c7aef2fd4fe3869b6)
+        ;
+
+        
+    
+    
+            var feature_group_b2da8940885a995c529b4656964d2cb2 = L.featureGroup(
+                {}
+            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+        
+    
+            var marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a = L.markerClusterGroup(
+                {}
+            );
+            feature_group_b2da8940885a995c529b4656964d2cb2.addLayer(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+        
+    
+            var circle_marker_8e99ce81a252aea502e902127ddea2be = L.circleMarker(
+                [39.498, -0.367],
+                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+        
+    
+        var popup_1c810054a149c47f0a452475cb154b6f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fbc878be1b110faf5d69580546c86f70 = $(`<div id="html_fbc878be1b110faf5d69580546c86f70" style="width: 100.0%; height: 100.0%;"><b>Rascanya</b><br>Accesible / Potencial<br><b>2.110 €/m²</b></div>`)[0];
+            popup_1c810054a149c47f0a452475cb154b6f.setContent(html_fbc878be1b110faf5d69580546c86f70);
+        
+
+        circle_marker_8e99ce81a252aea502e902127ddea2be.bindPopup(popup_1c810054a149c47f0a452475cb154b6f)
+        ;
+
+        
+    
+    
+            var circle_marker_5af04532cd57fe64a997deda21b368d6 = L.circleMarker(
+                [39.479, -0.402],
+                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+        
+    
+        var popup_7c14ac44ff66b2d723771a29d880d5ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b56b37f5748a9605bb16e129a98d5a6 = $(`<div id="html_3b56b37f5748a9605bb16e129a98d5a6" style="width: 100.0%; height: 100.0%;"><b>L’Olivereta</b><br>Accesible / Potencial<br><b>2.172 €/m²</b></div>`)[0];
+            popup_7c14ac44ff66b2d723771a29d880d5ad.setContent(html_3b56b37f5748a9605bb16e129a98d5a6);
+        
+
+        circle_marker_5af04532cd57fe64a997deda21b368d6.bindPopup(popup_7c14ac44ff66b2d723771a29d880d5ad)
+        ;
+
+        
+    
+    
+            var circle_marker_db72ffd6d3e4a3a81d920621b8aa1807 = L.circleMarker(
+                [39.495, -0.392],
+                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+        
+    
+        var popup_61d2ed487e50aa22182de4c9accf2989 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca28f01b184f6a46f9e85a286ec3d738 = $(`<div id="html_ca28f01b184f6a46f9e85a286ec3d738" style="width: 100.0%; height: 100.0%;"><b>Benicalap</b><br>Accesible / Potencial<br><b>2.454 €/m²</b></div>`)[0];
+            popup_61d2ed487e50aa22182de4c9accf2989.setContent(html_ca28f01b184f6a46f9e85a286ec3d738);
+        
+
+        circle_marker_db72ffd6d3e4a3a81d920621b8aa1807.bindPopup(popup_61d2ed487e50aa22182de4c9accf2989)
+        ;
+
+        
+    
+    
+            var circle_marker_e627f5d715d63cfcf52c36f1dc69842e = L.circleMarker(
+                [39.5, -0.35],
+                {"bubblingMouseEvents": true, "color": "#BD0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BD0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+        
+    
+        var popup_786049f63e17a2b0b0467959aee56660 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca68c805adaa4967c3c5919ae1e742c1 = $(`<div id="html_ca68c805adaa4967c3c5919ae1e742c1" style="width: 100.0%; height: 100.0%;"><b>Alboraya</b><br>Costa / Alta demanda<br><b>3.674 €/m²</b></div>`)[0];
+            popup_786049f63e17a2b0b0467959aee56660.setContent(html_ca68c805adaa4967c3c5919ae1e742c1);
+        
+
+        circle_marker_e627f5d715d63cfcf52c36f1dc69842e.bindPopup(popup_786049f63e17a2b0b0467959aee56660)
+        ;
+
+        
+    
+    
+            var circle_marker_b388db3737354684a6ac8903ce3b07b0 = L.circleMarker(
+                [39.59, -0.305],
+                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+        
+    
+        var popup_e6d4fe459c81761ecc0a8f7e1cd6371c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_365e99060b9f5b45bbef9f45ad7decaf = $(`<div id="html_365e99060b9f5b45bbef9f45ad7decaf" style="width: 100.0%; height: 100.0%;"><b>El Puig</b><br>Costa / Accesible<br><b>2.387 €/m²</b></div>`)[0];
+            popup_e6d4fe459c81761ecc0a8f7e1cd6371c.setContent(html_365e99060b9f5b45bbef9f45ad7decaf);
+        
+
+        circle_marker_b388db3737354684a6ac8903ce3b07b0.bindPopup(popup_e6d4fe459c81761ecc0a8f7e1cd6371c)
+        ;
+
+        
+    
+    
+            var circle_marker_ab32bab2f90edacb834defa9d3828909 = L.circleMarker(
+                [39.48, -0.415],
+                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+        
+    
+        var popup_0d3f450b2e4a1446d08f128a81c1a330 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6bdea1636fb548e4f1f7de48e097dd51 = $(`<div id="html_6bdea1636fb548e4f1f7de48e097dd51" style="width: 100.0%; height: 100.0%;"><b>Mislata</b><br>Periferia / Accesible<br><b>2.332 €/m²</b></div>`)[0];
+            popup_0d3f450b2e4a1446d08f128a81c1a330.setContent(html_6bdea1636fb548e4f1f7de48e097dd51);
+        
+
+        circle_marker_ab32bab2f90edacb834defa9d3828909.bindPopup(popup_0d3f450b2e4a1446d08f128a81c1a330)
+        ;
+
+        
+    
+    
+            var circle_marker_30bb05b1db7df33dc6f5f38a42fb635a = L.circleMarker(
+                [38.97, -0.18],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+        
+    
+        var popup_53c9385aafd6d044673a8accf1e20ed6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64b9278a231849d949a804f8551d7139 = $(`<div id="html_64b9278a231849d949a804f8551d7139" style="width: 100.0%; height: 100.0%;"><b>Gandía</b><br>Costa / Económico<br><b>1.415 €/m²</b></div>`)[0];
+            popup_53c9385aafd6d044673a8accf1e20ed6.setContent(html_64b9278a231849d949a804f8551d7139);
+        
+
+        circle_marker_30bb05b1db7df33dc6f5f38a42fb635a.bindPopup(popup_53c9385aafd6d044673a8accf1e20ed6)
+        ;
+
+        
+    
+    
+            var circle_marker_eb659c9b5064f81e16d210c61805c916 = L.circleMarker(
+                [38.99, -0.52],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+        
+    
+        var popup_81476a4b33465975858b6445f6242e1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9878932c698dfbccc811096215e484d3 = $(`<div id="html_9878932c698dfbccc811096215e484d3" style="width: 100.0%; height: 100.0%;"><b>Xàtiva</b><br>Interior / En alza<br><b>1.400 €/m²</b></div>`)[0];
+            popup_81476a4b33465975858b6445f6242e1d.setContent(html_9878932c698dfbccc811096215e484d3);
+        
+
+        circle_marker_eb659c9b5064f81e16d210c61805c916.bindPopup(popup_81476a4b33465975858b6445f6242e1d)
+        ;
+
+        
+    
+    
+            var heat_map_9e0ebadbd0cd61b30188e159e95880c3 = L.heatLayer(
+                [[39.464, -0.376, 5046.0], [39.475, -0.377, 4213.0], [39.465, -0.373, 4450.0], [39.474, -0.355, 3777.0], [39.47, -0.33, 3420.0], [39.487, -0.364, 3000.0], [39.449, -0.387, 2800.0], [39.468, -0.405, 2600.0], [39.498, -0.367, 2110.0], [39.479, -0.402, 2172.0], [39.495, -0.392, 2454.0], [39.5, -0.35, 3674.0], [39.59, -0.305, 2387.0], [39.48, -0.415, 2332.0], [38.97, -0.18, 1415.0], [38.99, -0.52, 1400.0]],
+                {"blur": 22, "maxZoom": 1, "minOpacity": 0.4, "radius": 28}
+            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+        
+    
+            var layer_control_5eecf72e211180409a9736ab1122ee4e = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_89503c1a3293f018aa0297fd6da8eefa,
+                },
+                overlays :  {
+                    "Zonas premium/centro" : feature_group_12984e991b9d279166253e5d2bed5db1,
+                    "Zonas emergentes" : feature_group_ef194cc4e52a5d7844a4438ff71b0f20,
+                    "Zonas accesibles/periferia" : feature_group_b2da8940885a995c529b4656964d2cb2,
+                    "Mapa de calor (\u20ac/m\u00b2)" : heat_map_9e0ebadbd0cd61b30188e159e95880c3,
+                },
+            };
+            L.control.layers(
+                layer_control_5eecf72e211180409a9736ab1122ee4e.base_layers,
+                layer_control_5eecf72e211180409a9736ab1122ee4e.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+        
+</script>
+</html>
