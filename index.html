@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_039e4e10f266a692a76f51ac7c90a236 {
+                #map_90a0763a73ce0d681bc3d563c9dabf90 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -34,26 +34,45 @@
                 }
             </style>
         
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
-    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@master/folium/templates/leaflet_heat.min.js"></script>
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_039e4e10f266a692a76f51ac7c90a236" ></div>
+<div style="position: fixed; 
+     bottom: 30px; left: 30px; width: 270px; z-index:9999; font-size:14px;
+     background-color: rgba(255,255,255,0.95); border:1px solid #ccc; border-radius:8px; padding:12px;">
+<b>Precios aproximados €/m²</b><br>
+<div style="margin-top:6px;">
+  <div><span style="display:inline-block;width:14px;height:14px;background:#0b8043;margin-right:6px;"></span> &lt; 1.200</div>
+  <div><span style="display:inline-block;width:14px;height:14px;background:#34a853;margin-right:6px;"></span> 1.200–1.400</div>
+  <div><span style="display:inline-block;width:14px;height:14px;background:#fbbc04;margin-right:6px;"></span> 1.400–1.600</div>
+  <div><span style="display:inline-block;width:14px;height:14px;background:#f57c00;margin-right:6px;"></span> 1.600–1.800</div>
+  <div><span style="display:inline-block;width:14px;height:14px;background:#d93025;margin-right:6px;"></span> &gt; 1.800</div>
+</div>
+<p style="margin-top:8px;margin-bottom:0;font-size:12px;color:#555;">
+Valores orientativos para visualizar zonas de oportunidad.<br>
+Perfil y oportunidad indicativos.
+</p>
+</div>
+    
+     <h3 style="position: fixed; top: 15px; left: 15px; z-index: 9999; 
+     background: rgba(255,255,255,0.95); padding: 8px 12px; border-radius: 6px;
+     border:1px solid #ccc; font-family: Arial; font-size: 18px; margin: 0;">
+     Mapa inmobiliario interactivo: Valencia y Comunitat Valenciana (€/m² aproximados)
+     </h3>
+    
+            <div class="folium-map" id="map_90a0763a73ce0d681bc3d563c9dabf90" ></div>
         
 </body>
 <script>
     
     
-            var map_039e4e10f266a692a76f51ac7c90a236 = L.map(
-                "map_039e4e10f266a692a76f51ac7c90a236",
+            var map_90a0763a73ce0d681bc3d563c9dabf90 = L.map(
+                "map_90a0763a73ce0d681bc3d563c9dabf90",
                 {
-                    center: [39.47, -0.376],
+                    center: [39.4699, -0.3763],
                     crs: L.CRS.EPSG3857,
-                    zoom: 11,
+                    zoom: 8,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -63,371 +82,1198 @@
 
         
     
-            var tile_layer_89503c1a3293f018aa0297fd6da8eefa = L.tileLayer(
+            var tile_layer_6817527239e1802c34b47d1de2cd3aaa = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
         
     
-            var feature_group_12984e991b9d279166253e5d2bed5db1 = L.featureGroup(
-                {}
-            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+            var circle_marker_c305e8046b216ed0f756daf1cd323bab = L.circleMarker(
+                [39.4638, -0.3766],
+                {"bubblingMouseEvents": true, "color": "#d93025", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d93025", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
         
     
-            var marker_cluster_736645c780d0025621f330d90e299f6c = L.markerClusterGroup(
-                {}
+        var popup_993fea672945d4a66e43ed8a19c5366c = L.popup({"maxWidth": 320});
+
+        
+            var html_96cedcaeea2268ac6178b250fcd262f6 = $(`<div id="html_96cedcaeea2268ac6178b250fcd262f6" style="width: 100.0%; height: 100.0%;"><b>Valencia - Ruzafa</b><br>Precio: 1900 €/m²<br>Perfil: Inversores / jóvenes profesionales<br>Oportunidad: Alquiler turístico y plusvalía (8–12%)</div>`)[0];
+            popup_993fea672945d4a66e43ed8a19c5366c.setContent(html_96cedcaeea2268ac6178b250fcd262f6);
+        
+
+        circle_marker_c305e8046b216ed0f756daf1cd323bab.bindPopup(popup_993fea672945d4a66e43ed8a19c5366c)
+        ;
+
+        
+    
+    
+            circle_marker_c305e8046b216ed0f756daf1cd323bab.bindTooltip(
+                `<div>
+                     Valencia - Ruzafa • 1900 €/m²
+                 </div>`,
+                {"sticky": true}
             );
-            feature_group_12984e991b9d279166253e5d2bed5db1.addLayer(marker_cluster_736645c780d0025621f330d90e299f6c);
         
     
-            var circle_marker_31e053d07afba086e5055b464a13b000 = L.circleMarker(
-                [39.464, -0.376],
-                {"bubblingMouseEvents": true, "color": "#800026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_736645c780d0025621f330d90e299f6c);
+            var circle_marker_c7885c317022bddbb8765281ccbd7d9e = L.circleMarker(
+                [39.4703, -0.327],
+                {"bubblingMouseEvents": true, "color": "#d93025", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d93025", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
         
     
-        var popup_f5c47e22903c98c8b125ca1af745b2ab = L.popup({"maxWidth": "100%"});
+        var popup_2009df5ce1dc069c14c2c1a33b506f36 = L.popup({"maxWidth": 320});
 
         
-            var html_467a0893b263b5b120fd21de050340fe = $(`<div id="html_467a0893b263b5b120fd21de050340fe" style="width: 100.0%; height: 100.0%;"><b>Ruzafa</b><br>Premium / Alta demanda<br><b>5.046 €/m²</b></div>`)[0];
-            popup_f5c47e22903c98c8b125ca1af745b2ab.setContent(html_467a0893b263b5b120fd21de050340fe);
+            var html_067aac5f1f02131941dc657471013a71 = $(`<div id="html_067aac5f1f02131941dc657471013a71" style="width: 100.0%; height: 100.0%;"><b>Valencia - El Cabanyal</b><br>Precio: 1850 €/m²<br>Perfil: Inversores / alquiler turístico<br>Oportunidad: Rehabilitación + alquiler turístico</div>`)[0];
+            popup_2009df5ce1dc069c14c2c1a33b506f36.setContent(html_067aac5f1f02131941dc657471013a71);
         
 
-        circle_marker_31e053d07afba086e5055b464a13b000.bindPopup(popup_f5c47e22903c98c8b125ca1af745b2ab)
+        circle_marker_c7885c317022bddbb8765281ccbd7d9e.bindPopup(popup_2009df5ce1dc069c14c2c1a33b506f36)
         ;
 
         
     
     
-            var circle_marker_7d2023feb2c7fa97bb3c9bbd6bca3f95 = L.circleMarker(
-                [39.475, -0.377],
-                {"bubblingMouseEvents": true, "color": "#BD0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BD0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_736645c780d0025621f330d90e299f6c);
-        
-    
-        var popup_b054157b8a38b5c06567a15123f2e2ea = L.popup({"maxWidth": "100%"});
-
-        
-            var html_d535185a11c12edb8542e368fadbabaa = $(`<div id="html_d535185a11c12edb8542e368fadbabaa" style="width: 100.0%; height: 100.0%;"><b>Ciutat Vella</b><br>Premium / Centro histórico<br><b>4.213 €/m²</b></div>`)[0];
-            popup_b054157b8a38b5c06567a15123f2e2ea.setContent(html_d535185a11c12edb8542e368fadbabaa);
-        
-
-        circle_marker_7d2023feb2c7fa97bb3c9bbd6bca3f95.bindPopup(popup_b054157b8a38b5c06567a15123f2e2ea)
-        ;
-
-        
-    
-    
-            var circle_marker_ff55d1c2ec98aad001761ef736e442fe = L.circleMarker(
-                [39.465, -0.373],
-                {"bubblingMouseEvents": true, "color": "#BD0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BD0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_736645c780d0025621f330d90e299f6c);
-        
-    
-        var popup_ad1c1f96c8cb52d151593a883cc2a5ee = L.popup({"maxWidth": "100%"});
-
-        
-            var html_290a2b06b0209d4d20c50dd90b9b1b91 = $(`<div id="html_290a2b06b0209d4d20c50dd90b9b1b91" style="width: 100.0%; height: 100.0%;"><b>L’Eixample</b><br>Premium<br><b>4.450 €/m²</b></div>`)[0];
-            popup_ad1c1f96c8cb52d151593a883cc2a5ee.setContent(html_290a2b06b0209d4d20c50dd90b9b1b91);
-        
-
-        circle_marker_ff55d1c2ec98aad001761ef736e442fe.bindPopup(popup_ad1c1f96c8cb52d151593a883cc2a5ee)
-        ;
-
-        
-    
-    
-            var circle_marker_f7199c609c574c28f800a1a132013c8e = L.circleMarker(
-                [39.474, -0.355],
-                {"bubblingMouseEvents": true, "color": "#BD0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BD0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_736645c780d0025621f330d90e299f6c);
-        
-    
-        var popup_eede662415320f1705c8b5a23b377287 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_0f848968449d71ef599ca3b69658e46f = $(`<div id="html_0f848968449d71ef599ca3b69658e46f" style="width: 100.0%; height: 100.0%;"><b>Pla del Real</b><br>Residencial alta<br><b>3.777 €/m²</b></div>`)[0];
-            popup_eede662415320f1705c8b5a23b377287.setContent(html_0f848968449d71ef599ca3b69658e46f);
-        
-
-        circle_marker_f7199c609c574c28f800a1a132013c8e.bindPopup(popup_eede662415320f1705c8b5a23b377287)
-        ;
-
-        
-    
-    
-            var feature_group_ef194cc4e52a5d7844a4438ff71b0f20 = L.featureGroup(
-                {}
-            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
-        
-    
-            var marker_cluster_49e31b79f6bfd083a07701208f346251 = L.markerClusterGroup(
-                {}
+            circle_marker_c7885c317022bddbb8765281ccbd7d9e.bindTooltip(
+                `<div>
+                     Valencia - El Cabanyal • 1850 €/m²
+                 </div>`,
+                {"sticky": true}
             );
-            feature_group_ef194cc4e52a5d7844a4438ff71b0f20.addLayer(marker_cluster_49e31b79f6bfd083a07701208f346251);
         
     
-            var circle_marker_b62803a38bf56121ce8aed2a41a957ce = L.circleMarker(
-                [39.47, -0.33],
-                {"bubblingMouseEvents": true, "color": "#E31A1C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E31A1C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_49e31b79f6bfd083a07701208f346251);
+            var circle_marker_ff4d508bdb36fd2a6bd65b905e8e58de = L.circleMarker(
+                [39.4878, -0.3634],
+                {"bubblingMouseEvents": true, "color": "#d93025", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d93025", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
         
     
-        var popup_538c1558f3269f1285c734b20f73dac7 = L.popup({"maxWidth": "100%"});
+        var popup_a3f3c213022e3b3619a7a9e5db227c0d = L.popup({"maxWidth": 320});
 
         
-            var html_974b64925f1c49cd3807aa422c571cad = $(`<div id="html_974b64925f1c49cd3807aa422c571cad" style="width: 100.0%; height: 100.0%;"><b>El Cabanyal</b><br>Emergente / Reforma<br><b>3.420 €/m²</b></div>`)[0];
-            popup_538c1558f3269f1285c734b20f73dac7.setContent(html_974b64925f1c49cd3807aa422c571cad);
+            var html_7faabebcdf2551a396debacea25ac6a6 = $(`<div id="html_7faabebcdf2551a396debacea25ac6a6" style="width: 100.0%; height: 100.0%;"><b>Valencia - Benimaclet</b><br>Precio: 1800 €/m²<br>Perfil: Estudiantes / jóvenes<br>Oportunidad: Alquiler estable y rotación</div>`)[0];
+            popup_a3f3c213022e3b3619a7a9e5db227c0d.setContent(html_7faabebcdf2551a396debacea25ac6a6);
         
 
-        circle_marker_b62803a38bf56121ce8aed2a41a957ce.bindPopup(popup_538c1558f3269f1285c734b20f73dac7)
+        circle_marker_ff4d508bdb36fd2a6bd65b905e8e58de.bindPopup(popup_a3f3c213022e3b3619a7a9e5db227c0d)
         ;
 
         
     
     
-            var circle_marker_3de23b407b078825d1233b6bf4c07a95 = L.circleMarker(
-                [39.487, -0.364],
-                {"bubblingMouseEvents": true, "color": "#E31A1C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E31A1C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_49e31b79f6bfd083a07701208f346251);
-        
-    
-        var popup_471835c53a901e22a7aee0470145ecac = L.popup({"maxWidth": "100%"});
-
-        
-            var html_cb265d5233d2bda52121565b0104c62f = $(`<div id="html_cb265d5233d2bda52121565b0104c62f" style="width: 100.0%; height: 100.0%;"><b>Benimaclet</b><br>Emergente / Estudiantil<br><b>3.000 €/m²</b></div>`)[0];
-            popup_471835c53a901e22a7aee0470145ecac.setContent(html_cb265d5233d2bda52121565b0104c62f);
-        
-
-        circle_marker_3de23b407b078825d1233b6bf4c07a95.bindPopup(popup_471835c53a901e22a7aee0470145ecac)
-        ;
-
-        
-    
-    
-            var circle_marker_6a4fbf9f39e1eefaa4cc0a3319eb6c9b = L.circleMarker(
-                [39.449, -0.387],
-                {"bubblingMouseEvents": true, "color": "#FC4E2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FC4E2A", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_49e31b79f6bfd083a07701208f346251);
-        
-    
-        var popup_3850d5e71c00d4102315573412e37176 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_630171de7d304dbd2909939cb7dfafff = $(`<div id="html_630171de7d304dbd2909939cb7dfafff" style="width: 100.0%; height: 100.0%;"><b>Malilla</b><br>Emergente<br><b>2.800 €/m²</b></div>`)[0];
-            popup_3850d5e71c00d4102315573412e37176.setContent(html_630171de7d304dbd2909939cb7dfafff);
-        
-
-        circle_marker_6a4fbf9f39e1eefaa4cc0a3319eb6c9b.bindPopup(popup_3850d5e71c00d4102315573412e37176)
-        ;
-
-        
-    
-    
-            var circle_marker_9a7ef73c9e6e3099ba1968f5b100347b = L.circleMarker(
-                [39.468, -0.405],
-                {"bubblingMouseEvents": true, "color": "#FC4E2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FC4E2A", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_49e31b79f6bfd083a07701208f346251);
-        
-    
-        var popup_b4e7746eb2cdd66c7aef2fd4fe3869b6 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_f704ce204d2232f21b4e485e177bbf39 = $(`<div id="html_f704ce204d2232f21b4e485e177bbf39" style="width: 100.0%; height: 100.0%;"><b>Nou Moles</b><br>Emergente<br><b>2.600 €/m²</b></div>`)[0];
-            popup_b4e7746eb2cdd66c7aef2fd4fe3869b6.setContent(html_f704ce204d2232f21b4e485e177bbf39);
-        
-
-        circle_marker_9a7ef73c9e6e3099ba1968f5b100347b.bindPopup(popup_b4e7746eb2cdd66c7aef2fd4fe3869b6)
-        ;
-
-        
-    
-    
-            var feature_group_b2da8940885a995c529b4656964d2cb2 = L.featureGroup(
-                {}
-            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
-        
-    
-            var marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a = L.markerClusterGroup(
-                {}
+            circle_marker_ff4d508bdb36fd2a6bd65b905e8e58de.bindTooltip(
+                `<div>
+                     Valencia - Benimaclet • 1800 €/m²
+                 </div>`,
+                {"sticky": true}
             );
-            feature_group_b2da8940885a995c529b4656964d2cb2.addLayer(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
         
     
-            var circle_marker_8e99ce81a252aea502e902127ddea2be = L.circleMarker(
-                [39.498, -0.367],
-                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+            var circle_marker_0b1cc3eb5177fa3715d8b9f034f0fbe1 = L.circleMarker(
+                [39.475, -0.3781],
+                {"bubblingMouseEvents": true, "color": "#d93025", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d93025", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
         
     
-        var popup_1c810054a149c47f0a452475cb154b6f = L.popup({"maxWidth": "100%"});
+        var popup_b0eec356ce906b50be008197ee4e0961 = L.popup({"maxWidth": 320});
 
         
-            var html_fbc878be1b110faf5d69580546c86f70 = $(`<div id="html_fbc878be1b110faf5d69580546c86f70" style="width: 100.0%; height: 100.0%;"><b>Rascanya</b><br>Accesible / Potencial<br><b>2.110 €/m²</b></div>`)[0];
-            popup_1c810054a149c47f0a452475cb154b6f.setContent(html_fbc878be1b110faf5d69580546c86f70);
+            var html_5792cfbedc0ae5cb3d833b250d6b5cdc = $(`<div id="html_5792cfbedc0ae5cb3d833b250d6b5cdc" style="width: 100.0%; height: 100.0%;"><b>Valencia - Ciutat Vella</b><br>Precio: 2100 €/m²<br>Perfil: Inversores prime<br>Oportunidad: Rehabilitación + venta/alquiler premium</div>`)[0];
+            popup_b0eec356ce906b50be008197ee4e0961.setContent(html_5792cfbedc0ae5cb3d833b250d6b5cdc);
         
 
-        circle_marker_8e99ce81a252aea502e902127ddea2be.bindPopup(popup_1c810054a149c47f0a452475cb154b6f)
+        circle_marker_0b1cc3eb5177fa3715d8b9f034f0fbe1.bindPopup(popup_b0eec356ce906b50be008197ee4e0961)
         ;
 
         
     
     
-            var circle_marker_5af04532cd57fe64a997deda21b368d6 = L.circleMarker(
-                [39.479, -0.402],
-                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+            circle_marker_0b1cc3eb5177fa3715d8b9f034f0fbe1.bindTooltip(
+                `<div>
+                     Valencia - Ciutat Vella • 2100 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-        var popup_7c14ac44ff66b2d723771a29d880d5ad = L.popup({"maxWidth": "100%"});
+            var circle_marker_9ec16dbe56123db0a2d16fb0f9699acb = L.circleMarker(
+                [39.4685, -0.3725],
+                {"bubblingMouseEvents": true, "color": "#d93025", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d93025", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_2dfe4e337c7cfda26f16d4779c0e38b5 = L.popup({"maxWidth": 320});
 
         
-            var html_3b56b37f5748a9605bb16e129a98d5a6 = $(`<div id="html_3b56b37f5748a9605bb16e129a98d5a6" style="width: 100.0%; height: 100.0%;"><b>L’Olivereta</b><br>Accesible / Potencial<br><b>2.172 €/m²</b></div>`)[0];
-            popup_7c14ac44ff66b2d723771a29d880d5ad.setContent(html_3b56b37f5748a9605bb16e129a98d5a6);
+            var html_6ba5052c77739fbe401dca4d263d1b77 = $(`<div id="html_6ba5052c77739fbe401dca4d263d1b77" style="width: 100.0%; height: 100.0%;"><b>Valencia - Ensanche</b><br>Precio: 2000 €/m²<br>Perfil: Residencial premium<br>Oportunidad: Alquiler premium / reventa selectiva</div>`)[0];
+            popup_2dfe4e337c7cfda26f16d4779c0e38b5.setContent(html_6ba5052c77739fbe401dca4d263d1b77);
         
 
-        circle_marker_5af04532cd57fe64a997deda21b368d6.bindPopup(popup_7c14ac44ff66b2d723771a29d880d5ad)
+        circle_marker_9ec16dbe56123db0a2d16fb0f9699acb.bindPopup(popup_2dfe4e337c7cfda26f16d4779c0e38b5)
         ;
 
         
     
     
-            var circle_marker_db72ffd6d3e4a3a81d920621b8aa1807 = L.circleMarker(
-                [39.495, -0.392],
-                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+            circle_marker_9ec16dbe56123db0a2d16fb0f9699acb.bindTooltip(
+                `<div>
+                     Valencia - Ensanche • 2000 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-        var popup_61d2ed487e50aa22182de4c9accf2989 = L.popup({"maxWidth": "100%"});
+            var circle_marker_4c688ac48f473dfd88a84ca5f7f25ff7 = L.circleMarker(
+                [39.4586, -0.392],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_a04c0444929c70c10745a8ce522ceabc = L.popup({"maxWidth": 320});
 
         
-            var html_ca28f01b184f6a46f9e85a286ec3d738 = $(`<div id="html_ca28f01b184f6a46f9e85a286ec3d738" style="width: 100.0%; height: 100.0%;"><b>Benicalap</b><br>Accesible / Potencial<br><b>2.454 €/m²</b></div>`)[0];
-            popup_61d2ed487e50aa22182de4c9accf2989.setContent(html_ca28f01b184f6a46f9e85a286ec3d738);
+            var html_bd0ff8e114a454d57c6afac44f06bab5 = $(`<div id="html_bd0ff8e114a454d57c6afac44f06bab5" style="width: 100.0%; height: 100.0%;"><b>Valencia - Patraix</b><br>Precio: 1650 €/m²<br>Perfil: Familias<br>Oportunidad: Compra para alquiler estable</div>`)[0];
+            popup_a04c0444929c70c10745a8ce522ceabc.setContent(html_bd0ff8e114a454d57c6afac44f06bab5);
         
 
-        circle_marker_db72ffd6d3e4a3a81d920621b8aa1807.bindPopup(popup_61d2ed487e50aa22182de4c9accf2989)
+        circle_marker_4c688ac48f473dfd88a84ca5f7f25ff7.bindPopup(popup_a04c0444929c70c10745a8ce522ceabc)
         ;
 
         
     
     
-            var circle_marker_e627f5d715d63cfcf52c36f1dc69842e = L.circleMarker(
-                [39.5, -0.35],
-                {"bubblingMouseEvents": true, "color": "#BD0026", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BD0026", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+            circle_marker_4c688ac48f473dfd88a84ca5f7f25ff7.bindTooltip(
+                `<div>
+                     Valencia - Patraix • 1650 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-        var popup_786049f63e17a2b0b0467959aee56660 = L.popup({"maxWidth": "100%"});
+            var circle_marker_fce2b0e96df56d3ec8c7fda511cd2670 = L.circleMarker(
+                [39.4872, -0.3956],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_03a67d295269647b2786692332aed618 = L.popup({"maxWidth": 320});
 
         
-            var html_ca68c805adaa4967c3c5919ae1e742c1 = $(`<div id="html_ca68c805adaa4967c3c5919ae1e742c1" style="width: 100.0%; height: 100.0%;"><b>Alboraya</b><br>Costa / Alta demanda<br><b>3.674 €/m²</b></div>`)[0];
-            popup_786049f63e17a2b0b0467959aee56660.setContent(html_ca68c805adaa4967c3c5919ae1e742c1);
+            var html_8f7ea432b694f5d56aa0a4eccffd13fc = $(`<div id="html_8f7ea432b694f5d56aa0a4eccffd13fc" style="width: 100.0%; height: 100.0%;"><b>Valencia - Campanar</b><br>Precio: 1750 €/m²<br>Perfil: Familias / nuevos desarrollos<br>Oportunidad: Compra en obra reciente para alquiler</div>`)[0];
+            popup_03a67d295269647b2786692332aed618.setContent(html_8f7ea432b694f5d56aa0a4eccffd13fc);
         
 
-        circle_marker_e627f5d715d63cfcf52c36f1dc69842e.bindPopup(popup_786049f63e17a2b0b0467959aee56660)
+        circle_marker_fce2b0e96df56d3ec8c7fda511cd2670.bindPopup(popup_03a67d295269647b2786692332aed618)
         ;
 
         
     
     
-            var circle_marker_b388db3737354684a6ac8903ce3b07b0 = L.circleMarker(
-                [39.59, -0.305],
-                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+            circle_marker_fce2b0e96df56d3ec8c7fda511cd2670.bindTooltip(
+                `<div>
+                     Valencia - Campanar • 1750 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-        var popup_e6d4fe459c81761ecc0a8f7e1cd6371c = L.popup({"maxWidth": "100%"});
+            var circle_marker_ee633cf2b070fa4b4856644982b97511 = L.circleMarker(
+                [39.5668, -0.5303],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_ee3b7a38bd2f4b9d7e8b9941f9338df1 = L.popup({"maxWidth": 320});
 
         
-            var html_365e99060b9f5b45bbef9f45ad7decaf = $(`<div id="html_365e99060b9f5b45bbef9f45ad7decaf" style="width: 100.0%; height: 100.0%;"><b>El Puig</b><br>Costa / Accesible<br><b>2.387 €/m²</b></div>`)[0];
-            popup_e6d4fe459c81761ecc0a8f7e1cd6371c.setContent(html_365e99060b9f5b45bbef9f45ad7decaf);
+            var html_1bd22c800db8b582f47706012363db46 = $(`<div id="html_1bd22c800db8b582f47706012363db46" style="width: 100.0%; height: 100.0%;"><b>La Eliana</b><br>Precio: 1650 €/m²<br>Perfil: Familias media-alta / expatriados<br>Oportunidad: Alquiler premium, reforma + reventa (15–20%)</div>`)[0];
+            popup_ee3b7a38bd2f4b9d7e8b9941f9338df1.setContent(html_1bd22c800db8b582f47706012363db46);
         
 
-        circle_marker_b388db3737354684a6ac8903ce3b07b0.bindPopup(popup_e6d4fe459c81761ecc0a8f7e1cd6371c)
+        circle_marker_ee633cf2b070fa4b4856644982b97511.bindPopup(popup_ee3b7a38bd2f4b9d7e8b9941f9338df1)
         ;
 
         
     
     
-            var circle_marker_ab32bab2f90edacb834defa9d3828909 = L.circleMarker(
-                [39.48, -0.415],
-                {"bubblingMouseEvents": true, "color": "#FD8D3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FD8D3C", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+            circle_marker_ee633cf2b070fa4b4856644982b97511.bindTooltip(
+                `<div>
+                     La Eliana • 1650 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-        var popup_0d3f450b2e4a1446d08f128a81c1a330 = L.popup({"maxWidth": "100%"});
+            var circle_marker_094829223ea613f57716146d88f35683 = L.circleMarker(
+                [39.5892, -0.461],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_5d8250347b582028756ddcd66dec154b = L.popup({"maxWidth": 320});
 
         
-            var html_6bdea1636fb548e4f1f7de48e097dd51 = $(`<div id="html_6bdea1636fb548e4f1f7de48e097dd51" style="width: 100.0%; height: 100.0%;"><b>Mislata</b><br>Periferia / Accesible<br><b>2.332 €/m²</b></div>`)[0];
-            popup_0d3f450b2e4a1446d08f128a81c1a330.setContent(html_6bdea1636fb548e4f1f7de48e097dd51);
+            var html_703e1df60043f9b3001fedf4ecf97cfe = $(`<div id="html_703e1df60043f9b3001fedf4ecf97cfe" style="width: 100.0%; height: 100.0%;"><b>Bétera</b><br>Precio: 1450 €/m²<br>Perfil: Familias media-alta / extranjeros<br>Oportunidad: Chalets en urbanización, alquiler 4,5–5,5%</div>`)[0];
+            popup_5d8250347b582028756ddcd66dec154b.setContent(html_703e1df60043f9b3001fedf4ecf97cfe);
         
 
-        circle_marker_ab32bab2f90edacb834defa9d3828909.bindPopup(popup_0d3f450b2e4a1446d08f128a81c1a330)
+        circle_marker_094829223ea613f57716146d88f35683.bindPopup(popup_5d8250347b582028756ddcd66dec154b)
         ;
 
         
     
     
-            var circle_marker_30bb05b1db7df33dc6f5f38a42fb635a = L.circleMarker(
-                [38.97, -0.18],
-                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+            circle_marker_094829223ea613f57716146d88f35683.bindTooltip(
+                `<div>
+                     Bétera • 1450 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-        var popup_53c9385aafd6d044673a8accf1e20ed6 = L.popup({"maxWidth": "100%"});
+            var circle_marker_2c25d4c51966c3899fc13f31957334a6 = L.circleMarker(
+                [39.5628, -0.4987],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_353c7ca9854c6b5287eaade4f81ccd10 = L.popup({"maxWidth": 320});
 
         
-            var html_64b9278a231849d949a804f8551d7139 = $(`<div id="html_64b9278a231849d949a804f8551d7139" style="width: 100.0%; height: 100.0%;"><b>Gandía</b><br>Costa / Económico<br><b>1.415 €/m²</b></div>`)[0];
-            popup_53c9385aafd6d044673a8accf1e20ed6.setContent(html_64b9278a231849d949a804f8551d7139);
+            var html_aa3c71ea77b500bab13040b7512cbd52 = $(`<div id="html_aa3c71ea77b500bab13040b7512cbd52" style="width: 100.0%; height: 100.0%;"><b>San Antonio de Benagéber</b><br>Precio: 1550 €/m²<br>Perfil: Familias / comunidad internacional<br>Oportunidad: Packs de viviendas y alquiler familiar</div>`)[0];
+            popup_353c7ca9854c6b5287eaade4f81ccd10.setContent(html_aa3c71ea77b500bab13040b7512cbd52);
         
 
-        circle_marker_30bb05b1db7df33dc6f5f38a42fb635a.bindPopup(popup_53c9385aafd6d044673a8accf1e20ed6)
+        circle_marker_2c25d4c51966c3899fc13f31957334a6.bindPopup(popup_353c7ca9854c6b5287eaade4f81ccd10)
         ;
 
         
     
     
-            var circle_marker_eb659c9b5064f81e16d210c61805c916 = L.circleMarker(
-                [38.99, -0.52],
-                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(marker_cluster_46cdad90f1e9e5e7082d285b1d01a46a);
+            circle_marker_2c25d4c51966c3899fc13f31957334a6.bindTooltip(
+                `<div>
+                     San Antonio de Benagéber • 1550 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-        var popup_81476a4b33465975858b6445f6242e1d = L.popup({"maxWidth": "100%"});
+            var circle_marker_ee062527e405448254da8a27b5a7e8c8 = L.circleMarker(
+                [39.528, -0.4618],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_6c70293415202e54e7e7deaefb9570f6 = L.popup({"maxWidth": 320});
 
         
-            var html_9878932c698dfbccc811096215e484d3 = $(`<div id="html_9878932c698dfbccc811096215e484d3" style="width: 100.0%; height: 100.0%;"><b>Xàtiva</b><br>Interior / En alza<br><b>1.400 €/m²</b></div>`)[0];
-            popup_81476a4b33465975858b6445f6242e1d.setContent(html_9878932c698dfbccc811096215e484d3);
+            var html_758060859ec6fb049479f3f36177dfbc = $(`<div id="html_758060859ec6fb049479f3f36177dfbc" style="width: 100.0%; height: 100.0%;"><b>Paterna - La Cañada</b><br>Precio: 1700 €/m²<br>Perfil: Familias media-alta / extranjeros<br>Oportunidad: Alquiler larga estancia y premium</div>`)[0];
+            popup_6c70293415202e54e7e7deaefb9570f6.setContent(html_758060859ec6fb049479f3f36177dfbc);
         
 
-        circle_marker_eb659c9b5064f81e16d210c61805c916.bindPopup(popup_81476a4b33465975858b6445f6242e1d)
+        circle_marker_ee062527e405448254da8a27b5a7e8c8.bindPopup(popup_6c70293415202e54e7e7deaefb9570f6)
         ;
 
         
     
     
-            var heat_map_9e0ebadbd0cd61b30188e159e95880c3 = L.heatLayer(
-                [[39.464, -0.376, 5046.0], [39.475, -0.377, 4213.0], [39.465, -0.373, 4450.0], [39.474, -0.355, 3777.0], [39.47, -0.33, 3420.0], [39.487, -0.364, 3000.0], [39.449, -0.387, 2800.0], [39.468, -0.405, 2600.0], [39.498, -0.367, 2110.0], [39.479, -0.402, 2172.0], [39.495, -0.392, 2454.0], [39.5, -0.35, 3674.0], [39.59, -0.305, 2387.0], [39.48, -0.415, 2332.0], [38.97, -0.18, 1415.0], [38.99, -0.52, 1400.0]],
-                {"blur": 22, "maxZoom": 1, "minOpacity": 0.4, "radius": 28}
-            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+            circle_marker_ee062527e405448254da8a27b5a7e8c8.bindTooltip(
+                `<div>
+                     Paterna - La Cañada • 1700 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
         
     
-            var layer_control_5eecf72e211180409a9736ab1122ee4e = {
-                base_layers : {
-                    "cartodbpositron" : tile_layer_89503c1a3293f018aa0297fd6da8eefa,
-                },
-                overlays :  {
-                    "Zonas premium/centro" : feature_group_12984e991b9d279166253e5d2bed5db1,
-                    "Zonas emergentes" : feature_group_ef194cc4e52a5d7844a4438ff71b0f20,
-                    "Zonas accesibles/periferia" : feature_group_b2da8940885a995c529b4656964d2cb2,
-                    "Mapa de calor (\u20ac/m\u00b2)" : heat_map_9e0ebadbd0cd61b30188e159e95880c3,
-                },
-            };
-            L.control.layers(
-                layer_control_5eecf72e211180409a9736ab1122ee4e.base_layers,
-                layer_control_5eecf72e211180409a9736ab1122ee4e.overlays,
-                {"autoZIndex": true, "collapsed": false, "position": "topright"}
-            ).addTo(map_039e4e10f266a692a76f51ac7c90a236);
+            var circle_marker_b4cb5f400c57094369531cc703650ae5 = L.circleMarker(
+                [39.5098, -0.4137],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_2469e9b0ad3d93e6053a91ad78124ded = L.popup({"maxWidth": 320});
+
+        
+            var html_01a2bbf77d66d804fdde943d118e57cf = $(`<div id="html_01a2bbf77d66d804fdde943d118e57cf" style="width: 100.0%; height: 100.0%;"><b>Burjassot</b><br>Precio: 1600 €/m²<br>Perfil: Estudiantes / familias<br>Oportunidad: Alquiler a largo plazo (universidad)</div>`)[0];
+            popup_2469e9b0ad3d93e6053a91ad78124ded.setContent(html_01a2bbf77d66d804fdde943d118e57cf);
+        
+
+        circle_marker_b4cb5f400c57094369531cc703650ae5.bindPopup(popup_2469e9b0ad3d93e6053a91ad78124ded)
+        ;
+
+        
+    
+    
+            circle_marker_b4cb5f400c57094369531cc703650ae5.bindTooltip(
+                `<div>
+                     Burjassot • 1600 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2e6108e3f15c9d863f5460606c70d1d3 = L.circleMarker(
+                [39.5453, -0.3956],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_a90ee3bbae34014926ca03eba565b09d = L.popup({"maxWidth": 320});
+
+        
+            var html_7b1e0704c02b57c4085b825ff58cff4c = $(`<div id="html_7b1e0704c02b57c4085b825ff58cff4c" style="width: 100.0%; height: 100.0%;"><b>Moncada</b><br>Precio: 1450 €/m²<br>Perfil: Familias / estudiantes<br>Oportunidad: Alquiler estable por proximidad universitaria</div>`)[0];
+            popup_a90ee3bbae34014926ca03eba565b09d.setContent(html_7b1e0704c02b57c4085b825ff58cff4c);
+        
+
+        circle_marker_2e6108e3f15c9d863f5460606c70d1d3.bindPopup(popup_a90ee3bbae34014926ca03eba565b09d)
+        ;
+
+        
+    
+    
+            circle_marker_2e6108e3f15c9d863f5460606c70d1d3.bindTooltip(
+                `<div>
+                     Moncada • 1450 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d048490cf0700c8a71b7f1a8f60329fc = L.circleMarker(
+                [39.4922, -0.4629],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_8ddbcd41bcfd7625544ecd892b6d932b = L.popup({"maxWidth": 320});
+
+        
+            var html_3e262f3f974b700a9d380489c7226968 = $(`<div id="html_3e262f3f974b700a9d380489c7226968" style="width: 100.0%; height: 100.0%;"><b>Manises</b><br>Precio: 1500 €/m²<br>Perfil: Trabajadores aeropuerto / familias<br>Oportunidad: Alquiler estable, viviendas funcionales</div>`)[0];
+            popup_8ddbcd41bcfd7625544ecd892b6d932b.setContent(html_3e262f3f974b700a9d380489c7226968);
+        
+
+        circle_marker_d048490cf0700c8a71b7f1a8f60329fc.bindPopup(popup_8ddbcd41bcfd7625544ecd892b6d932b)
+        ;
+
+        
+    
+    
+            circle_marker_d048490cf0700c8a71b7f1a8f60329fc.bindTooltip(
+                `<div>
+                     Manises • 1500 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_25c89283b7b263368d120f8bab99a03d = L.circleMarker(
+                [39.4823, -0.4475],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_b52c5c33eb0901af9fbb14c73be947b9 = L.popup({"maxWidth": 320});
+
+        
+            var html_8bc6d577b34ebb122b2d6ff22d790c60 = $(`<div id="html_8bc6d577b34ebb122b2d6ff22d790c60" style="width: 100.0%; height: 100.0%;"><b>Quart de Poblet</b><br>Precio: 1500 €/m²<br>Perfil: Familias<br>Oportunidad: Compra para alquiler estable</div>`)[0];
+            popup_b52c5c33eb0901af9fbb14c73be947b9.setContent(html_8bc6d577b34ebb122b2d6ff22d790c60);
+        
+
+        circle_marker_25c89283b7b263368d120f8bab99a03d.bindPopup(popup_b52c5c33eb0901af9fbb14c73be947b9)
+        ;
+
+        
+    
+    
+            circle_marker_25c89283b7b263368d120f8bab99a03d.bindTooltip(
+                `<div>
+                     Quart de Poblet • 1500 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_af0e83288023a6b3739bc4083f5ff2c4 = L.circleMarker(
+                [39.476, -0.4181],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_124a056490ca8af3de9a7982954da7b7 = L.popup({"maxWidth": 320});
+
+        
+            var html_b6780dcdd5ea24a26d3c4d2d553c516f = $(`<div id="html_b6780dcdd5ea24a26d3c4d2d553c516f" style="width: 100.0%; height: 100.0%;"><b>Mislata</b><br>Precio: 1600 €/m²<br>Perfil: Familias / proximidad a Valencia<br>Oportunidad: Alquiler estable, rotación alta</div>`)[0];
+            popup_124a056490ca8af3de9a7982954da7b7.setContent(html_b6780dcdd5ea24a26d3c4d2d553c516f);
+        
+
+        circle_marker_af0e83288023a6b3739bc4083f5ff2c4.bindPopup(popup_124a056490ca8af3de9a7982954da7b7)
+        ;
+
+        
+    
+    
+            circle_marker_af0e83288023a6b3739bc4083f5ff2c4.bindTooltip(
+                `<div>
+                     Mislata • 1600 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0164dba58dc6446f941d8133f1078b07 = L.circleMarker(
+                [39.6806, -0.2788],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_6ab55c480c1492b9327cefdcfacef824 = L.popup({"maxWidth": 320});
+
+        
+            var html_cdcfb1e96a2ca2174274ef1df9d3c7ba = $(`<div id="html_cdcfb1e96a2ca2174274ef1df9d3c7ba" style="width: 100.0%; height: 100.0%;"><b>Sagunto / Port de Sagunt</b><br>Precio: 1400 €/m²<br>Perfil: Industrial / costero<br>Oportunidad: Alquiler a trabajadores + segunda residencia</div>`)[0];
+            popup_6ab55c480c1492b9327cefdcfacef824.setContent(html_cdcfb1e96a2ca2174274ef1df9d3c7ba);
+        
+
+        circle_marker_0164dba58dc6446f941d8133f1078b07.bindPopup(popup_6ab55c480c1492b9327cefdcfacef824)
+        ;
+
+        
+    
+    
+            circle_marker_0164dba58dc6446f941d8133f1078b07.bindTooltip(
+                `<div>
+                     Sagunto / Port de Sagunt • 1400 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4e2d6d6989b3c44392bc41290af57972 = L.circleMarker(
+                [39.5454, -0.56],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_ee938feca30781ebc154a78e8b66c3ef = L.popup({"maxWidth": 320});
+
+        
+            var html_100b4715e8c688d10050efe07a0996b4 = $(`<div id="html_100b4715e8c688d10050efe07a0996b4" style="width: 100.0%; height: 100.0%;"><b>Ribarroja del Turia</b><br>Precio: 1350 €/m²<br>Perfil: Familias / parejas jóvenes<br>Oportunidad: Reforma + reventa con margen</div>`)[0];
+            popup_ee938feca30781ebc154a78e8b66c3ef.setContent(html_100b4715e8c688d10050efe07a0996b4);
+        
+
+        circle_marker_4e2d6d6989b3c44392bc41290af57972.bindPopup(popup_ee938feca30781ebc154a78e8b66c3ef)
+        ;
+
+        
+    
+    
+            circle_marker_4e2d6d6989b3c44392bc41290af57972.bindTooltip(
+                `<div>
+                     Ribarroja del Turia • 1350 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2305fba2d710f6f2682133780918e3eb = L.circleMarker(
+                [39.6243, -0.5932],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_09880ebaf68a94171eea02f3d50c309c = L.popup({"maxWidth": 320});
+
+        
+            var html_3d3b0e31bb8abbf8dda9921dd0af3a98 = $(`<div id="html_3d3b0e31bb8abbf8dda9921dd0af3a98" style="width: 100.0%; height: 100.0%;"><b>Llíria</b><br>Precio: 1200 €/m²<br>Perfil: Familias presupuesto contenido<br>Oportunidad: Compra barata + revalorización</div>`)[0];
+            popup_09880ebaf68a94171eea02f3d50c309c.setContent(html_3d3b0e31bb8abbf8dda9921dd0af3a98);
+        
+
+        circle_marker_2305fba2d710f6f2682133780918e3eb.bindPopup(popup_09880ebaf68a94171eea02f3d50c309c)
+        ;
+
+        
+    
+    
+            circle_marker_2305fba2d710f6f2682133780918e3eb.bindTooltip(
+                `<div>
+                     Llíria • 1200 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9d54ab355ebc73b969fda6a73508516b = L.circleMarker(
+                [39.4693, -0.7176],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_26c1e56cfeb9b73ab090d592ab23ce38 = L.popup({"maxWidth": 320});
+
+        
+            var html_67d127731b7f6709d7ae16443c685604 = $(`<div id="html_67d127731b7f6709d7ae16443c685604" style="width: 100.0%; height: 100.0%;"><b>Chiva</b><br>Precio: 1250 €/m²<br>Perfil: Familias / segunda residencia<br>Oportunidad: Chalets y adosados a precio contenido</div>`)[0];
+            popup_26c1e56cfeb9b73ab090d592ab23ce38.setContent(html_67d127731b7f6709d7ae16443c685604);
+        
+
+        circle_marker_9d54ab355ebc73b969fda6a73508516b.bindPopup(popup_26c1e56cfeb9b73ab090d592ab23ce38)
+        ;
+
+        
+    
+    
+            circle_marker_9d54ab355ebc73b969fda6a73508516b.bindTooltip(
+                `<div>
+                     Chiva • 1250 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a747420816f739a3ae7ad7e63c4b4830 = L.circleMarker(
+                [39.4957, -0.6835],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_5e0012968100ea60aa9694a7e465f574 = L.popup({"maxWidth": 320});
+
+        
+            var html_e7af3303d9354254aeaa28813c04f7d3 = $(`<div id="html_e7af3303d9354254aeaa28813c04f7d3" style="width: 100.0%; height: 100.0%;"><b>Cheste</b><br>Precio: 1250 €/m²<br>Perfil: Familias / motor-parque empresarial<br>Oportunidad: Compra para alquiler a trabajadores</div>`)[0];
+            popup_5e0012968100ea60aa9694a7e465f574.setContent(html_e7af3303d9354254aeaa28813c04f7d3);
+        
+
+        circle_marker_a747420816f739a3ae7ad7e63c4b4830.bindPopup(popup_5e0012968100ea60aa9694a7e465f574)
+        ;
+
+        
+    
+    
+            circle_marker_a747420816f739a3ae7ad7e63c4b4830.bindTooltip(
+                `<div>
+                     Cheste • 1250 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_065f99498afeb0b19720334a057e4b64 = L.circleMarker(
+                [39.4885, -1.1014],
+                {"bubblingMouseEvents": true, "color": "#0b8043", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0b8043", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_daa5309b00357e600e8e462c2be332c4 = L.popup({"maxWidth": 320});
+
+        
+            var html_17b1c647a8483ef54a081daef4c8a918 = $(`<div id="html_17b1c647a8483ef54a081daef4c8a918" style="width: 100.0%; height: 100.0%;"><b>Requena</b><br>Precio: 1000 €/m²<br>Perfil: Local / segunda residencia<br>Oportunidad: Compra barata + proyectos de rehabilitación</div>`)[0];
+            popup_daa5309b00357e600e8e462c2be332c4.setContent(html_17b1c647a8483ef54a081daef4c8a918);
+        
+
+        circle_marker_065f99498afeb0b19720334a057e4b64.bindPopup(popup_daa5309b00357e600e8e462c2be332c4)
+        ;
+
+        
+    
+    
+            circle_marker_065f99498afeb0b19720334a057e4b64.bindTooltip(
+                `<div>
+                     Requena • 1000 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d937bbbf5059a4e381443ab61fe4f6a8 = L.circleMarker(
+                [39.5689, -1.203],
+                {"bubblingMouseEvents": true, "color": "#0b8043", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0b8043", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_884818820730e6b63a9438e007503f97 = L.popup({"maxWidth": 320});
+
+        
+            var html_f392a2d30334dc158fc63ea47992e0b8 = $(`<div id="html_f392a2d30334dc158fc63ea47992e0b8" style="width: 100.0%; height: 100.0%;"><b>Utiel</b><br>Precio: 950 €/m²<br>Perfil: Local / segunda residencia<br>Oportunidad: Rehabilitación y alquiler a largo plazo</div>`)[0];
+            popup_884818820730e6b63a9438e007503f97.setContent(html_f392a2d30334dc158fc63ea47992e0b8);
+        
+
+        circle_marker_d937bbbf5059a4e381443ab61fe4f6a8.bindPopup(popup_884818820730e6b63a9438e007503f97)
+        ;
+
+        
+    
+    
+            circle_marker_d937bbbf5059a4e381443ab61fe4f6a8.bindTooltip(
+                `<div>
+                     Utiel • 950 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_725d266f758821fd9a8526d6d92bb712 = L.circleMarker(
+                [39.3628, -0.4645],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_c5907990e967e98579f00e468dce2b9e = L.popup({"maxWidth": 320});
+
+        
+            var html_5d0b371750eb5b2197d5da1e6d3bd20e = $(`<div id="html_5d0b371750eb5b2197d5da1e6d3bd20e" style="width: 100.0%; height: 100.0%;"><b>Picassent</b><br>Precio: 1350 €/m²<br>Perfil: Familias / logística<br>Oportunidad: Compra para alquiler estable</div>`)[0];
+            popup_c5907990e967e98579f00e468dce2b9e.setContent(html_5d0b371750eb5b2197d5da1e6d3bd20e);
+        
+
+        circle_marker_725d266f758821fd9a8526d6d92bb712.bindPopup(popup_c5907990e967e98579f00e468dce2b9e)
+        ;
+
+        
+    
+    
+            circle_marker_725d266f758821fd9a8526d6d92bb712.bindTooltip(
+                `<div>
+                     Picassent • 1350 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_393a0b5669e2845aa33b7dcd180b4580 = L.circleMarker(
+                [39.1511, -0.4348],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_e906c9bcccbcb7a23a300f4367e00bb6 = L.popup({"maxWidth": 320});
+
+        
+            var html_bd57364d5cd309cc4c83699ccc703da2 = $(`<div id="html_bd57364d5cd309cc4c83699ccc703da2" style="width: 100.0%; height: 100.0%;"><b>Alzira</b><br>Precio: 1300 €/m²<br>Perfil: Familias / servicios<br>Oportunidad: Compra-venta con reforma ligera</div>`)[0];
+            popup_e906c9bcccbcb7a23a300f4367e00bb6.setContent(html_bd57364d5cd309cc4c83699ccc703da2);
+        
+
+        circle_marker_393a0b5669e2845aa33b7dcd180b4580.bindPopup(popup_e906c9bcccbcb7a23a300f4367e00bb6)
+        ;
+
+        
+    
+    
+            circle_marker_393a0b5669e2845aa33b7dcd180b4580.bindTooltip(
+                `<div>
+                     Alzira • 1300 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a8b4c893012fa9798ae97b3524bab2c3 = L.circleMarker(
+                [38.8223, -0.6064],
+                {"bubblingMouseEvents": true, "color": "#0b8043", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0b8043", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_f6d0665444b996a897880a010a235534 = L.popup({"maxWidth": 320});
+
+        
+            var html_d5a331a92fa10614b7599d11d9e73bec = $(`<div id="html_d5a331a92fa10614b7599d11d9e73bec" style="width: 100.0%; height: 100.0%;"><b>Ontinyent</b><br>Precio: 1050 €/m²<br>Perfil: Local / industrial<br>Oportunidad: Rehabilitación, yields moderados</div>`)[0];
+            popup_f6d0665444b996a897880a010a235534.setContent(html_d5a331a92fa10614b7599d11d9e73bec);
+        
+
+        circle_marker_a8b4c893012fa9798ae97b3524bab2c3.bindPopup(popup_f6d0665444b996a897880a010a235534)
+        ;
+
+        
+    
+    
+            circle_marker_a8b4c893012fa9798ae97b3524bab2c3.bindTooltip(
+                `<div>
+                     Ontinyent • 1050 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_db5b54170aabd0d3f1f1c9969f35b9da = L.circleMarker(
+                [38.9908, -0.5183],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_8b47fa21701ad67b176886e83a3a165d = L.popup({"maxWidth": 320});
+
+        
+            var html_23256bbd6f5f0ef0e9a9a23f5f3e1783 = $(`<div id="html_23256bbd6f5f0ef0e9a9a23f5f3e1783" style="width: 100.0%; height: 100.0%;"><b>Xàtiva</b><br>Precio: 1200 €/m²<br>Perfil: Familias / patrimonial<br>Oportunidad: Centro histórico: rehabilitar y alquilar</div>`)[0];
+            popup_8b47fa21701ad67b176886e83a3a165d.setContent(html_23256bbd6f5f0ef0e9a9a23f5f3e1783);
+        
+
+        circle_marker_db5b54170aabd0d3f1f1c9969f35b9da.bindPopup(popup_8b47fa21701ad67b176886e83a3a165d)
+        ;
+
+        
+    
+    
+            circle_marker_db5b54170aabd0d3f1f1c9969f35b9da.bindTooltip(
+                `<div>
+                     Xàtiva • 1200 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d0fe916580243788f11d69493ee43343 = L.circleMarker(
+                [39.5004, -0.3494],
+                {"bubblingMouseEvents": true, "color": "#d93025", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d93025", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_2c1d84629c7eddb7414e0978cfd4a34c = L.popup({"maxWidth": 320});
+
+        
+            var html_64fcb8373b9164eb7c874df0ed2d2341 = $(`<div id="html_64fcb8373b9164eb7c874df0ed2d2341" style="width: 100.0%; height: 100.0%;"><b>Alboraya</b><br>Precio: 1850 €/m²<br>Perfil: Segunda residencia / alquiler<br>Oportunidad: Alquiler turístico / estacional</div>`)[0];
+            popup_2c1d84629c7eddb7414e0978cfd4a34c.setContent(html_64fcb8373b9164eb7c874df0ed2d2341);
+        
+
+        circle_marker_d0fe916580243788f11d69493ee43343.bindPopup(popup_2c1d84629c7eddb7414e0978cfd4a34c)
+        ;
+
+        
+    
+    
+            circle_marker_d0fe916580243788f11d69493ee43343.bindTooltip(
+                `<div>
+                     Alboraya • 1850 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9cced6319053d47b4ccf99e9756815f2 = L.circleMarker(
+                [39.5885, -0.3007],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_67136b2ecac56bed2e285cdf0c60fb89 = L.popup({"maxWidth": 320});
+
+        
+            var html_ab99160a539a08e7d0db41aa26b40474 = $(`<div id="html_ab99160a539a08e7d0db41aa26b40474" style="width: 100.0%; height: 100.0%;"><b>El Puig</b><br>Precio: 1750 €/m²<br>Perfil: Residencial costero<br>Oportunidad: Segunda residencia y alquiler largo plazo</div>`)[0];
+            popup_67136b2ecac56bed2e285cdf0c60fb89.setContent(html_ab99160a539a08e7d0db41aa26b40474);
+        
+
+        circle_marker_9cced6319053d47b4ccf99e9756815f2.bindPopup(popup_67136b2ecac56bed2e285cdf0c60fb89)
+        ;
+
+        
+    
+    
+            circle_marker_9cced6319053d47b4ccf99e9756815f2.bindTooltip(
+                `<div>
+                     El Puig • 1750 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5b1d5522e2bdc17fee99a13b2ac00404 = L.circleMarker(
+                [39.1666, -0.2556],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_fafc7b9895754024e3ff975a677bc6b9 = L.popup({"maxWidth": 320});
+
+        
+            var html_e72374e8f48027f82d0f620f38404524 = $(`<div id="html_e72374e8f48027f82d0f620f38404524" style="width: 100.0%; height: 100.0%;"><b>Cullera</b><br>Precio: 1600 €/m²<br>Perfil: Turístico / segunda residencia<br>Oportunidad: Alquiler vacacional</div>`)[0];
+            popup_fafc7b9895754024e3ff975a677bc6b9.setContent(html_e72374e8f48027f82d0f620f38404524);
+        
+
+        circle_marker_5b1d5522e2bdc17fee99a13b2ac00404.bindPopup(popup_fafc7b9895754024e3ff975a677bc6b9)
+        ;
+
+        
+    
+    
+            circle_marker_5b1d5522e2bdc17fee99a13b2ac00404.bindTooltip(
+                `<div>
+                     Cullera • 1600 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_28a4c15133587ea375fafa9b51127f8e = L.circleMarker(
+                [39.2021, -0.3117],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_b14e9c7f707526de983ad263119140ed = L.popup({"maxWidth": 320});
+
+        
+            var html_47356cf54034c8b0c9c736caa9bcc07f = $(`<div id="html_47356cf54034c8b0c9c736caa9bcc07f" style="width: 100.0%; height: 100.0%;"><b>Sueca</b><br>Precio: 1300 €/m²<br>Perfil: Residencial / agrícola<br>Oportunidad: Compra económica + alquiler anual</div>`)[0];
+            popup_b14e9c7f707526de983ad263119140ed.setContent(html_47356cf54034c8b0c9c736caa9bcc07f);
+        
+
+        circle_marker_28a4c15133587ea375fafa9b51127f8e.bindPopup(popup_b14e9c7f707526de983ad263119140ed)
+        ;
+
+        
+    
+    
+            circle_marker_28a4c15133587ea375fafa9b51127f8e.bindTooltip(
+                `<div>
+                     Sueca • 1300 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9fec5622222b512d44370cdc1eff337b = L.circleMarker(
+                [39.9864, -0.0513],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_0b9e6cd42a04acf6ed7171901e623ebf = L.popup({"maxWidth": 320});
+
+        
+            var html_7c934f0ea82a656b77c8c2cf6911ad07 = $(`<div id="html_7c934f0ea82a656b77c8c2cf6911ad07" style="width: 100.0%; height: 100.0%;"><b>Castellón de la Plana</b><br>Precio: 1400 €/m²<br>Perfil: Residencial / estudiantes<br>Oportunidad: Alquiler estable, plusvalía moderada</div>`)[0];
+            popup_0b9e6cd42a04acf6ed7171901e623ebf.setContent(html_7c934f0ea82a656b77c8c2cf6911ad07);
+        
+
+        circle_marker_9fec5622222b512d44370cdc1eff337b.bindPopup(popup_0b9e6cd42a04acf6ed7171901e623ebf)
+        ;
+
+        
+    
+    
+            circle_marker_9fec5622222b512d44370cdc1eff337b.bindTooltip(
+                `<div>
+                     Castellón de la Plana • 1400 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6c051ce443a30fb91b0f9dffad2e58d4 = L.circleMarker(
+                [40.0542, 0.0666],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_a23b42db022483562d773a5b2f9e31cf = L.popup({"maxWidth": 320});
+
+        
+            var html_2adf36798df6bb557f8e0e9cea182286 = $(`<div id="html_2adf36798df6bb557f8e0e9cea182286" style="width: 100.0%; height: 100.0%;"><b>Benicàssim</b><br>Precio: 1750 €/m²<br>Perfil: Segunda residencia / turismo<br>Oportunidad: Alquiler turístico premium</div>`)[0];
+            popup_a23b42db022483562d773a5b2f9e31cf.setContent(html_2adf36798df6bb557f8e0e9cea182286);
+        
+
+        circle_marker_6c051ce443a30fb91b0f9dffad2e58d4.bindPopup(popup_a23b42db022483562d773a5b2f9e31cf)
+        ;
+
+        
+    
+    
+            circle_marker_6c051ce443a30fb91b0f9dffad2e58d4.bindTooltip(
+                `<div>
+                     Benicàssim • 1750 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_161f1d7b4999d6c4cfa4f6f18485f84b = L.circleMarker(
+                [40.092, 0.1408],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_b1bc66684f0a3a01330c8effc1b51c5b = L.popup({"maxWidth": 320});
+
+        
+            var html_5f529b7a3d329fdf241f9fc2c38dfb39 = $(`<div id="html_5f529b7a3d329fdf241f9fc2c38dfb39" style="width: 100.0%; height: 100.0%;"><b>Oropesa del Mar</b><br>Precio: 1500 €/m²<br>Perfil: Vacacional<br>Oportunidad: Alquiler estacional</div>`)[0];
+            popup_b1bc66684f0a3a01330c8effc1b51c5b.setContent(html_5f529b7a3d329fdf241f9fc2c38dfb39);
+        
+
+        circle_marker_161f1d7b4999d6c4cfa4f6f18485f84b.bindPopup(popup_b1bc66684f0a3a01330c8effc1b51c5b)
+        ;
+
+        
+    
+    
+            circle_marker_161f1d7b4999d6c4cfa4f6f18485f84b.bindTooltip(
+                `<div>
+                     Oropesa del Mar • 1500 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4f1a3bd491c72007ace13c0975dc506c = L.circleMarker(
+                [40.3567, 0.4063],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_4e1d9a6e0340da8b4076f40fbccab0be = L.popup({"maxWidth": 320});
+
+        
+            var html_e8bc3ba795ef57fda0458bbd6787f4be = $(`<div id="html_e8bc3ba795ef57fda0458bbd6787f4be" style="width: 100.0%; height: 100.0%;"><b>Peñíscola</b><br>Precio: 1600 €/m²<br>Perfil: Vacacional<br>Oportunidad: Alquiler turístico y reventa</div>`)[0];
+            popup_4e1d9a6e0340da8b4076f40fbccab0be.setContent(html_e8bc3ba795ef57fda0458bbd6787f4be);
+        
+
+        circle_marker_4f1a3bd491c72007ace13c0975dc506c.bindPopup(popup_4e1d9a6e0340da8b4076f40fbccab0be)
+        ;
+
+        
+    
+    
+            circle_marker_4f1a3bd491c72007ace13c0975dc506c.bindTooltip(
+                `<div>
+                     Peñíscola • 1600 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_56f27934454d7d2c673028845f9992e9 = L.circleMarker(
+                [39.9382, -0.1045],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_04a2009a8aa002a795c2e5d24846298b = L.popup({"maxWidth": 320});
+
+        
+            var html_6833f6bc88a170ffe489fa4111bf7c41 = $(`<div id="html_6833f6bc88a170ffe489fa4111bf7c41" style="width: 100.0%; height: 100.0%;"><b>Vila-real</b><br>Precio: 1200 €/m²<br>Perfil: Industrial / residencial<br>Oportunidad: Alquiler a largo plazo</div>`)[0];
+            popup_04a2009a8aa002a795c2e5d24846298b.setContent(html_6833f6bc88a170ffe489fa4111bf7c41);
+        
+
+        circle_marker_56f27934454d7d2c673028845f9992e9.bindPopup(popup_04a2009a8aa002a795c2e5d24846298b)
+        ;
+
+        
+    
+    
+            circle_marker_56f27934454d7d2c673028845f9992e9.bindTooltip(
+                `<div>
+                     Vila-real • 1200 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_61b43ce14c06a826ea0b015f66c14bbf = L.circleMarker(
+                [38.3452, -0.481],
+                {"bubblingMouseEvents": true, "color": "#f57c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f57c00", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_6f16bc8736235483e9709e97974b403c = L.popup({"maxWidth": 320});
+
+        
+            var html_e074108bfec2b4c8e4ca6041f8785052 = $(`<div id="html_e074108bfec2b4c8e4ca6041f8785052" style="width: 100.0%; height: 100.0%;"><b>Alicante</b><br>Precio: 1750 €/m²<br>Perfil: Turístico / internacional<br>Oportunidad: Alquiler turístico, flip de pisos</div>`)[0];
+            popup_6f16bc8736235483e9709e97974b403c.setContent(html_e074108bfec2b4c8e4ca6041f8785052);
+        
+
+        circle_marker_61b43ce14c06a826ea0b015f66c14bbf.bindPopup(popup_6f16bc8736235483e9709e97974b403c)
+        ;
+
+        
+    
+    
+            circle_marker_61b43ce14c06a826ea0b015f66c14bbf.bindTooltip(
+                `<div>
+                     Alicante • 1750 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e0fed489b1dbea8a911ff2618b5804cd = L.circleMarker(
+                [38.2699, -0.7126],
+                {"bubblingMouseEvents": true, "color": "#34a853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#34a853", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_ac6ef6d5aa7f1d2c53beef5bcab5c7e9 = L.popup({"maxWidth": 320});
+
+        
+            var html_72fd43d9b287f8e6dfc0f971163295fb = $(`<div id="html_72fd43d9b287f8e6dfc0f971163295fb" style="width: 100.0%; height: 100.0%;"><b>Elche</b><br>Precio: 1350 €/m²<br>Perfil: Residencial / industrial<br>Oportunidad: Compra para alquiler anual</div>`)[0];
+            popup_ac6ef6d5aa7f1d2c53beef5bcab5c7e9.setContent(html_72fd43d9b287f8e6dfc0f971163295fb);
+        
+
+        circle_marker_e0fed489b1dbea8a911ff2618b5804cd.bindPopup(popup_ac6ef6d5aa7f1d2c53beef5bcab5c7e9)
+        ;
+
+        
+    
+    
+            circle_marker_e0fed489b1dbea8a911ff2618b5804cd.bindTooltip(
+                `<div>
+                     Elche • 1350 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d3bcce10585d3a45bb0577b13bbce921 = L.circleMarker(
+                [38.1917, -0.5658],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_6f21e9c5f84de7938321cf3735405284 = L.popup({"maxWidth": 320});
+
+        
+            var html_bae1abdf0b49003d4074e7da54e4b2b6 = $(`<div id="html_bae1abdf0b49003d4074e7da54e4b2b6" style="width: 100.0%; height: 100.0%;"><b>Santa Pola</b><br>Precio: 1550 €/m²<br>Perfil: Vacacional<br>Oportunidad: Alquiler turístico y estacional</div>`)[0];
+            popup_6f21e9c5f84de7938321cf3735405284.setContent(html_bae1abdf0b49003d4074e7da54e4b2b6);
+        
+
+        circle_marker_d3bcce10585d3a45bb0577b13bbce921.bindPopup(popup_6f21e9c5f84de7938321cf3735405284)
+        ;
+
+        
+    
+    
+            circle_marker_d3bcce10585d3a45bb0577b13bbce921.bindTooltip(
+                `<div>
+                     Santa Pola • 1550 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1be797205bffffd8696ffb0535c267ca = L.circleMarker(
+                [37.9787, -0.6822],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_c302dfde231ce393ea45631396873fb5 = L.popup({"maxWidth": 320});
+
+        
+            var html_6ff51e7e6d00a395785083342ec7400e = $(`<div id="html_6ff51e7e6d00a395785083342ec7400e" style="width: 100.0%; height: 100.0%;"><b>Torrevieja</b><br>Precio: 1450 €/m²<br>Perfil: Internacional / vacacional<br>Oportunidad: Alquiler turístico a mercados nórdicos/UK</div>`)[0];
+            popup_c302dfde231ce393ea45631396873fb5.setContent(html_6ff51e7e6d00a395785083342ec7400e);
+        
+
+        circle_marker_1be797205bffffd8696ffb0535c267ca.bindPopup(popup_c302dfde231ce393ea45631396873fb5)
+        ;
+
+        
+    
+    
+            circle_marker_1be797205bffffd8696ffb0535c267ca.bindTooltip(
+                `<div>
+                     Torrevieja • 1450 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_33b68bd99fdd7b419ae7132ea8768c67 = L.circleMarker(
+                [38.84, 0.1086],
+                {"bubblingMouseEvents": true, "color": "#d93025", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d93025", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_228922155e9fcdece17a638cda241d5d = L.popup({"maxWidth": 320});
+
+        
+            var html_ee9465a162e201d6ba7fa19838112274 = $(`<div id="html_ee9465a162e201d6ba7fa19838112274" style="width: 100.0%; height: 100.0%;"><b>Denia</b><br>Precio: 1850 €/m²<br>Perfil: Vacacional / segunda residencia<br>Oportunidad: Alquiler premium y revalorización</div>`)[0];
+            popup_228922155e9fcdece17a638cda241d5d.setContent(html_ee9465a162e201d6ba7fa19838112274);
+        
+
+        circle_marker_33b68bd99fdd7b419ae7132ea8768c67.bindPopup(popup_228922155e9fcdece17a638cda241d5d)
+        ;
+
+        
+    
+    
+            circle_marker_33b68bd99fdd7b419ae7132ea8768c67.bindTooltip(
+                `<div>
+                     Denia • 1850 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8dc4234910db43ed1a1fa65c0696ebc6 = L.circleMarker(
+                [38.794, 0.163],
+                {"bubblingMouseEvents": true, "color": "#d93025", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d93025", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_3937afc877ee4bf903ef7304a721efb8 = L.popup({"maxWidth": 320});
+
+        
+            var html_7c5572529805acde792f387c343b674b = $(`<div id="html_7c5572529805acde792f387c343b674b" style="width: 100.0%; height: 100.0%;"><b>Xàbia / Jávea</b><br>Precio: 2000 €/m²<br>Perfil: Internacional / lujo vacacional<br>Oportunidad: Alquiler premium y flips de villas</div>`)[0];
+            popup_3937afc877ee4bf903ef7304a721efb8.setContent(html_7c5572529805acde792f387c343b674b);
+        
+
+        circle_marker_8dc4234910db43ed1a1fa65c0696ebc6.bindPopup(popup_3937afc877ee4bf903ef7304a721efb8)
+        ;
+
+        
+    
+    
+            circle_marker_8dc4234910db43ed1a1fa65c0696ebc6.bindTooltip(
+                `<div>
+                     Xàbia / Jávea • 2000 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b51b2337405e4508b9b697a6468cc5ec = L.circleMarker(
+                [38.6004, -0.0496],
+                {"bubblingMouseEvents": true, "color": "#d93025", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d93025", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_726e801433d1a8a63625533bedf8264f = L.popup({"maxWidth": 320});
+
+        
+            var html_a5eea99388574bb699f0e76db9799365 = $(`<div id="html_a5eea99388574bb699f0e76db9799365" style="width: 100.0%; height: 100.0%;"><b>Altea</b><br>Precio: 1850 €/m²<br>Perfil: Vacacional / artístico<br>Oportunidad: Alquiler premium y reventa</div>`)[0];
+            popup_726e801433d1a8a63625533bedf8264f.setContent(html_a5eea99388574bb699f0e76db9799365);
+        
+
+        circle_marker_b51b2337405e4508b9b697a6468cc5ec.bindPopup(popup_726e801433d1a8a63625533bedf8264f)
+        ;
+
+        
+    
+    
+            circle_marker_b51b2337405e4508b9b697a6468cc5ec.bindTooltip(
+                `<div>
+                     Altea • 1850 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4bed837fe8f5584ff2bc7fc44aa54456 = L.circleMarker(
+                [38.5074, -0.2336],
+                {"bubblingMouseEvents": true, "color": "#fbbc04", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbbc04", "fillOpacity": 0.88, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_90a0763a73ce0d681bc3d563c9dabf90);
+        
+    
+        var popup_9b5fa3f3c9deba9ca2f369873873128f = L.popup({"maxWidth": 320});
+
+        
+            var html_51065f4f2f907c7f4842990e7b2a964e = $(`<div id="html_51065f4f2f907c7f4842990e7b2a964e" style="width: 100.0%; height: 100.0%;"><b>La Vila Joiosa</b><br>Precio: 1550 €/m²<br>Perfil: Vacacional<br>Oportunidad: Alquiler estacional</div>`)[0];
+            popup_9b5fa3f3c9deba9ca2f369873873128f.setContent(html_51065f4f2f907c7f4842990e7b2a964e);
+        
+
+        circle_marker_4bed837fe8f5584ff2bc7fc44aa54456.bindPopup(popup_9b5fa3f3c9deba9ca2f369873873128f)
+        ;
+
+        
+    
+    
+            circle_marker_4bed837fe8f5584ff2bc7fc44aa54456.bindTooltip(
+                `<div>
+                     La Vila Joiosa • 1550 €/m²
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>
 </html>
